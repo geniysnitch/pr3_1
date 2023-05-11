@@ -1,0 +1,58 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+.block {
+	display: inline-block;
+	box-sizing: border-box;
+	height: 50vh;
+	width: 25%;
+	padding: 20px;
+	vertical-align: top;
+}
+
+.block:nth-child(2n) {
+	background-color: #f2f2f2;
+}
+
+.block h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.block ul {
+	margin: 10px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.block ul li {
+	margin: 0;
+	padding: 5px 0;
+	border-top: 1px solid #ccc;
+	position: relative;
+}
+
+.block ul li::before {
+	content: "";
+	position: absolute;
+	left: -10px;
+	top: 8px;
+	width: 6px;
+	height: 6px;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+.block ul li.red-text:nth-child(2n) {
+	color: red;
+}
+
+.block ul li.red-text:nth-child(2n)::before {
+	background-color: red;
+}
